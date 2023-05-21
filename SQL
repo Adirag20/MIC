@@ -1,0 +1,35 @@
++-----------------+         +-----------------------+
+|     Contact     |         |        Group          |
++-----------------+         +-----------------------+
+| contact_id (PK) |         | group_id (PK)         |
+| first_name      |     *   | group_name            |
+| last_name       |---------| group_description     |
+| email           |         | group_created_date    |
+| phone           |         +-----------------------+
+| address         |
+| designation     |
+| school          |
+| description     |
++-----------------+
+
+
+CREATE TABLE Contact (
+  contact_id INT PRIMARY KEY,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  email VARCHAR(255),
+  phone VARCHAR(20),
+  address VARCHAR(255),
+  designation VARCHAR(255),
+  school VARCHAR(255),
+  description TEXT
+);
+
+CREATE TABLE Group (
+  group_id INT PRIMARY KEY,
+  group_name VARCHAR(255),
+  group_description VARCHAR(255),
+  group_created_date DATE
+);
+
+
